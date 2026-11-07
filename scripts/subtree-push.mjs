@@ -27,6 +27,7 @@ function run(cmd, args, opts = {}) {
     cwd: root,
     encoding: 'utf8',
     stdio: opts.stdio ?? ['ignore', 'pipe', 'pipe'],
+    env: opts.env ?? process.env,
   });
   if (result.status !== 0) {
     const err = (result.stderr || result.stdout || '').trim();
@@ -77,7 +78,11 @@ function main() {
   run('git', ['subtree', 'split', `--prefix=${prefix}`, '-b', splitBranch], { stdio: 'inherit' });
 
   console.log(`Pushing to ${remote} (${branch}) …`);
-  run('git', ['push', remote, `${splitBranch}:${branch}`], { stdio: 'inherit' });
+  // Tap remote is a public Formula mirror — skip monorepo husky pre-push (full tree scan).
+  run('git', ['push', remote, `${splitBranch}:${branch}`], {
+    stdio: 'inherit',
+    env: { ...process.env, HUSKY: '0' },
+  });
 
   try {
     run('git', ['branch', '-D', splitBranch]);
