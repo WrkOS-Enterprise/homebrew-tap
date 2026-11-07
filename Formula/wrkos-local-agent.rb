@@ -42,7 +42,6 @@ class WrkosLocalAgent < Formula
         • Pair only with an https:// WrkOS API URL (http:// allowed for localhost only).
         • Cursor keys stay on this Mac; the bridge dials out — nothing inbound.
         • Control UI is localhost-only (127.0.0.1:4731).
-        • See SECURITY.md in this tap for the threat model.
 
       State: ~/.wrkos-local-agent (override with WRKOS_LOCAL_AGENT_HOME).
     EOS

@@ -40,7 +40,6 @@ Your Cursor key and device credentials stay on the Mac. WrkOS holds the conversa
 - Install only from this tap — the Formula pins the official **HTTPS npm** package and a
   **checksum** so a swapped download is rejected.
 - The Mac dials **out** to WrkOS; nothing in this install opens a public inbound port.
-- See [SECURITY.md](./SECURITY.md) for the full checklist.
 
 ## npm alternative
 
@@ -71,5 +70,4 @@ git remote add homebrew-tap git@github.com:WrkOS-Enterprise/homebrew-tap.git
 node packaging/homebrew-tap/scripts/subtree-push.mjs
 ```
 
-Full steps: [scripts/subtree-bootstrap.md](./scripts/subtree-bootstrap.md).  
-Security model: [SECURITY.md](./SECURITY.md).
+Full steps: [scripts/subtree-bootstrap.md](./scripts/subtree-bootstrap.md).
