@@ -7,10 +7,10 @@ class WrkosLocalAgent < Formula
   homepage "https://www.npmjs.com/package/wrkos-local-agent"
   # Public npm tarball — HTTPS only. CI replaces url/sha256/version on each release.
   # Never point url at http:// or an unsigned mirror (supply-chain / hijack risk).
-  url "https://registry.npmjs.org/wrkos-local-agent/-/wrkos-local-agent-0.1.0.tgz"
-  sha256 "76b156ea643e9132444d612481a61e0f8ffcb83d28d2ab7d9ad1ad429950bbb0"
+  url "https://registry.npmjs.org/wrkos-local-agent/-/wrkos-local-agent-0.1.2.tgz"
+  sha256 "34c6b80f86336dbe54cabda170347dc9a83a20ba4dfec459d3e18eb3dd894390"
   license "MIT"
-  version "0.1.0"
+  version "0.1.2"
 
   depends_on "node@22"
 
