@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const formulaPath = join(dirname(fileURLToPath(import.meta.url)), '..', 'Formula', 'wrkos-local-agent.rb');
+const formulaPath = join(dirname(fileURLToPath(import.meta.url)), '..', 'Formula', 'wrkos-agent.rb');
 const text = readFileSync(formulaPath, 'utf8');
 
 const urlMatch = text.match(/^\s*url "([^"]+)"/m);
@@ -12,7 +12,7 @@ const shaMatch = text.match(/^\s*sha256 "([^"]+)"/m);
 const url = urlMatch?.[1] ?? '';
 const sha = shaMatch?.[1] ?? '';
 
-if (!url.startsWith('https://registry.npmjs.org/wrkos-local-agent/')) {
+if (!url.startsWith('https://registry.npmjs.org/wrkos-agent/')) {
   console.error(`FAIL: url must be official HTTPS npm tarball, got: ${url}`);
   process.exit(1);
 }

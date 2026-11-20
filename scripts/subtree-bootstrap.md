@@ -37,7 +37,7 @@ edit target and force SHA bumps in the mono on every change.
    ```bash
    brew untap WrkOS-Enterprise/tap 2>/dev/null || true
    brew tap WrkOS-Enterprise/tap
-   brew install wrkos-local-agent   # after a real Formula sha256 is published
+   brew install wrkos-agent   # after a real Formula sha256 is published
    ```
 
 ## Ongoing updates

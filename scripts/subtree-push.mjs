@@ -67,7 +67,7 @@ function main() {
   }
 
   try {
-    run('git', ['ls-files', '--error-unmatch', `${prefix}/Formula/wrkos-local-agent.rb`]);
+    run('git', ['ls-files', '--error-unmatch', `${prefix}/Formula/wrkos-agent.rb`]);
   } catch {
     console.error(`${prefix} is not tracked yet. Commit it into wrkos-mono, then re-run.`);
     process.exit(1);
@@ -92,7 +92,7 @@ function main() {
 
   const url = run('git', ['remote', 'get-url', remote]);
   console.log(`Done. Public tap updated: ${url} (${branch})`);
-  console.log('Operators: brew tap WrkOS-Enterprise/tap && brew install wrkos-local-agent');
+  console.log('Operators: brew tap WrkOS-Enterprise/tap && brew install wrkos-agent');
 }
 
 try {

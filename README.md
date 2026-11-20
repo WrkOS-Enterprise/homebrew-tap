@@ -8,13 +8,13 @@ WrkOS keeps delivery, sales, docs, and day-to-day coordination in one organisati
 
 ## Why this tap matters
 
-Local Agents need a small companion app on each company Mac: **`wrkos-local-agent`**. It pairs the laptop with WrkOS, keeps the Cursor API key on the device, and runs coding turns in local repos while progress stays visible in WrkOS.
+Local Agents need a small companion app on each company Mac: **`wrkos-agent`**. It pairs the laptop with WrkOS, keeps the Cursor API key on the device, and runs coding turns in local repos while progress stays visible in WrkOS.
 
 This tap makes that companion easy to install:
 
 ```bash
 brew tap WrkOS-Enterprise/tap
-brew install wrkos-local-agent
+brew install wrkos-agent
 ```
 
 No WrkOS source checkout, no GitHub login on the laptop — just Homebrew, then connect to your workspace.
@@ -25,9 +25,8 @@ No WrkOS source checkout, no GitHub login on the laptop — just Homebrew, then 
 2. In WrkOS → **Agents → Local Agents**, choose **Pair computer** and copy the command.
 3. On the Mac:
    ```bash
-   wrkos-local-agent pair --api <your-wrkos-api-url> --code <code>
-   wrkos-local-agent ui      # set Cursor Ultra key + add repo folders
-   wrkos-local-agent start   # leave running
+   wrkos-agent pair --api <your-wrkos-api-url> --code <code>
+   wrkos-agent start   # control panel + connection; leave running
    ```
 4. Refresh WrkOS — the computer shows online; open a repo chat and work from there.
 
@@ -46,10 +45,10 @@ Your Cursor key and device credentials stay on the Mac. WrkOS holds the conversa
 If you prefer not to use Homebrew:
 
 ```bash
-npm install -g wrkos-local-agent   # Node >= 22.13
+npm install -g wrkos-agent   # Node >= 22.13
 ```
 
-Then use the same `pair` / `ui` / `start` flow.
+Then use the same `pair` and `start` flow. `start` opens the control panel and connects.
 
 ## Support
 
