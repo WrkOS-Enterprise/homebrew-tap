@@ -7,12 +7,12 @@ class WrkosAgent < Formula
   homepage "https://www.npmjs.com/package/wrkos-agent"
   # Public npm tarball — HTTPS only. CI replaces url/sha256/version on each release.
   # Never point url at http:// or an unsigned mirror (supply-chain / hijack risk).
-  url "https://registry.npmjs.org/wrkos-agent/-/wrkos-agent-0.1.4.tgz"
-  # Checksum of the previous published tarball. CI overwrites this when
-  # local-agent-v0.1.4 is published to npm as wrkos-agent.
+  url "https://registry.npmjs.org/wrkos-agent/-/wrkos-agent-0.1.0.tgz"
+  # Checksum stays the previous published tarball until wrkos-agent@0.1.0 is
+  # published. CI or a manual publish will replace it.
   sha256 "a607d399b4d6dcb61caafc95681a220e868372626308193eb9587c3fb15c6a48"
   license "MIT"
-  version "0.1.4"
+  version "0.1.0"
 
   depends_on "node@22"
 
