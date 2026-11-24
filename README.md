@@ -50,6 +50,17 @@ npm install -g wrkos-agent   # Node >= 22.13
 
 Then use the same `pair` and `start` flow. `start` opens the control panel and connects.
 
+## wrkosd
+
+Protocol v2 remote workspaces use `wrkosd` (Node 24). The same tap installs it:
+
+```bash
+brew tap WrkOS-Enterprise/tap
+brew install wrkosd
+```
+
+`npm install -g @wrkos/wrkosd` is the non-Homebrew install. Linux servers use `ghcr.io/wrkos-enterprise/wrkosd`. Pair with `wrkosd pair`, then `wrkosd service install` on a laptop. Existing `wrkos-agent` installs stay on protocol v1.
+
 ## Support
 
 Pairing and Local Agents are available for organisations that use WrkOS Local Agents. For product access and workspace setup, use your WrkOS admin or [app.wrkos.com](https://app.wrkos.com).
