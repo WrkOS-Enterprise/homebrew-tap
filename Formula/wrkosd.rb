@@ -7,8 +7,8 @@ class Wrkosd < Formula
   # Homebrew reads the version from the tarball name. Never point url at http://
   # or an unsigned mirror (supply-chain / hijack risk).
   url "https://registry.npmjs.org/@wrkos/wrkosd/-/wrkosd-0.1.0.tgz"
-  # Placeholder until the first public release. Install refuses this checksum.
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  # Checksum of the published @wrkos/wrkosd@0.1.0 tarball.
+  sha256 "1c20896ca4bc8f2255f45ab7dc90510486973e744692fba73015b11bcf97bd9a"
   license "MIT"
 
   depends_on "node@24"
