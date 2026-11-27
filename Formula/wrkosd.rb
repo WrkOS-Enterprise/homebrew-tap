@@ -6,9 +6,9 @@ class Wrkosd < Formula
   # Public npm tarball — HTTPS only. CI replaces url/sha256 on each wrkosd-v* release.
   # Homebrew reads the version from the tarball name. Never point url at http://
   # or an unsigned mirror (supply-chain / hijack risk).
-  url "https://registry.npmjs.org/@wrkos/wrkosd/-/wrkosd-0.1.0.tgz"
-  # Checksum of the published @wrkos/wrkosd@0.1.0 tarball.
-  sha256 "1c20896ca4bc8f2255f45ab7dc90510486973e744692fba73015b11bcf97bd9a"
+  url "https://registry.npmjs.org/@wrkos/wrkosd/-/wrkosd-0.1.1.tgz"
+  # Checksum of the published @wrkos/wrkosd@0.1.1 tarball.
+  sha256 "f08e17ba811ef7aae70de2b5382fb8590e35d7356e335244180d961fcd868c2b"
   license "MIT"
 
   depends_on "node@24"
